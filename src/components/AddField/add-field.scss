@@ -1,0 +1,97 @@
+.todo{
+	max-width: 450px;
+	margin: 0 auto;
+	padding: 0 20px;
+	height: calc(100vh - 102.4px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&__add{
+		display: flex;
+		justify-content: space-between;
+
+		input{
+			width: 70%;
+			height: 40px;
+			margin: 0;
+			padding: 0;
+			border: 2px solid #784BA0;
+			color: #fff;
+			background-color: #8BC6EC;
+			background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+			padding-left: 10px;
+			font-size: 20px;
+		}
+		button{
+			width: 25%;
+			background-color: #8BC6EC;
+			background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+			border: 2px solid #784BA0;
+			font-size: 16px;
+			cursor: pointer;
+			&:hover{
+				
+			}
+		}
+	}
+
+	&__list{
+		padding: 25px 0;
+		.todo__curr{
+			position: relative;
+			margin: 10px 0;
+			width: 100%;
+			height: 50px;
+			background-color: #8BC6EC;
+			background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+			box-shadow: #784BA0 3px 5px;
+			border-radius: 50px;
+			span{
+				display: inline-block;
+				font-size: 24px;
+				padding-left: 20px;
+				line-height: 46px;
+				overflow: hidden;
+				width: 60%;
+				text-overflow: ellipsis;
+			}
+			button{
+				position: absolute;
+				top: 24%;
+				right: 65px;
+				border: none;
+				cursor: pointer;
+				background: url('../../icons/trash.png') 0 0/ contain;
+				font-size: 25px;
+				width: 25px;
+				height: 24px;
+				opacity: 0.4;
+				&:hover{
+					opacity: 1;
+				}
+			}
+			input{
+				position: absolute;
+				top: 18%;
+				right: 25px;
+				width: 25px;
+				height: 25px;
+			}
+		}
+		
+		.checked{
+			background-color: #8bc5ec67;
+			background-image: none;
+			span{
+				color: #545454;
+			}
+		}
+	}
+
+	&__counter{
+		max-width: 450px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 0 0 40px 0;
+	}
+}
